@@ -1,0 +1,3 @@
+service : {
+  checkBalance: (principal) -> (nat) query;
+}
