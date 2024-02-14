@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import {Principal} from "@dfnity/Principal";
+import {Principal} from "@dfinity/principal";
 import {token} from "../../../declarations/token";
 
 function Balance() {
@@ -10,7 +10,7 @@ function Balance() {
   async function handleClick() {
     // console.log("Balance Button Clicked");
     const bal = await token.balanceOf(Principal.fromText(principal));
-    setbalRes(bal.toLocaleString());
+    setbalRes(bal.toLocaleString()+" " + await token.getSymbol());
   }
 
 
