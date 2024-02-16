@@ -10,6 +10,7 @@ function Balance() {
   
   async function handleClick() {
     // console.log("Balance Button Clicked");
+    setHidden(true);
     const bal = await token.balanceOf(Principal.fromText(principal));
     setbalRes(bal.toLocaleString()+" " + await token.getSymbol());
     setHidden(false);
