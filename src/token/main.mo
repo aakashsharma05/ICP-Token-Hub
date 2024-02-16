@@ -30,7 +30,6 @@ actor Token{
         
         if(balances.get(msg.caller) == null){
             let amount = 10000;
-            balances.put(msg.caller,amount);
             let result = await transfer(msg.caller,amount);
             return result;
         }
